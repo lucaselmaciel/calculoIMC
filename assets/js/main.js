@@ -5,12 +5,12 @@ function calculoImc(){
    
     function calculo(event){
         event.preventDefault();
-        console.log('blabal');
+        
         const peso = form.querySelector('.peso');
         const altura = form.querySelector('.altura');
         let imc = Number(peso.value)/(Number(altura.value)**2);
         
-        setResultado(`${imc}`);
+        setResultado(`${imc.toFixed(2)}`);
         if (imc < 18.5){
             alert('Você está abaixo do peso');
         }
